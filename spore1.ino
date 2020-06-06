@@ -11,7 +11,7 @@ int LEDPin = 13;
 
 
 
-/// Floating value for Mic sound level used during comparison with NoiseFloor.
+/// Int value for Mic sound level used during comparison with NoiseFloor.
 int MicValue1 = 0;
 
 
