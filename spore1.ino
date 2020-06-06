@@ -10,7 +10,6 @@ int Mic1PinAnalog = A1;
 int LEDPin = 13;
 
 
-
 /// Int value for Mic sound level used during comparison with NoiseFloor.
 int MicValue1 = 0;
 
@@ -40,14 +39,8 @@ void setup() {
  }
 
 
-
-
 void loop() {
 
-/// Assign our clock to dt
-  //dt = clock.getDateTime();
-
- 
 
 /// Sound Detection begin.
   
@@ -66,9 +59,6 @@ void loop() {
   //Serial.println(MicValue1); // Prints Mic1 sample value to serial monitor for debug.
 
 
-
-
-
 //// Begin our check for a sound event!
 
 
@@ -81,22 +71,15 @@ if(NoiseFloorValue-MicValue1>SoundEventThreshhold)
   /// Pull an LED on specified pin high for visual indication on hardware to indicate an event has occurred.
   digitalWrite(LEDPin, HIGH);
 
-
   /// Serial output about current task.
   Serial.print("Event Occurred at: ");
   Serial.print("Sound level above background noise: ");
   Serial.println(NoiseFloorValue-MicValue1);
-
 
   /// Wait and turn LED off by pulling the pin LOW, ending visual hardware event notification.
   delay(2000);
   digitalWrite(LEDPin, LOW);
 
   }
-
-/// End sound event check using pure analog.
-
-
-
   
 }
