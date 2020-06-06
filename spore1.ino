@@ -27,10 +27,6 @@ int SampleDelay = 1;
 int SoundEventThreshhold  = 350;
 
 
-/// Other Variables
-;int  Mic1Digitalval; // Define a digital variable val.
-
-
 void setup() {
 
 /// Pin I/O Setup
