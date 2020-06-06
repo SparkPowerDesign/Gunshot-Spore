@@ -84,7 +84,6 @@ if(NoiseFloorValue-MicValue1>SoundEventThreshhold)
 
   /// Serial output about current task.
   Serial.print("Event Occurred at: ");
- // Serial.println(clock.dateFormat("d-m-Y H:i:s", dt));
   Serial.print("Sound level above background noise: ");
   Serial.println(NoiseFloorValue-MicValue1);
 
